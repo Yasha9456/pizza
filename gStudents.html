@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <a href="home.html" class="logo">  pizza</a>
+
+        <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="menu.html">menu</a>
+            <a href="gallery.html">gallery</a>
+            <a href="gStudents.html">M-Students</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div id="menu" class="fas fa-bars"></div>
+    </header>
+    <div class="heading">
+        <h1>our Team Membres</h1>
+        <p><a href="home.html">home>>></a> M-Students</p>
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <ul id="members-list" style="text-align: center; font-size: 20px;">
+                <li type="none"> ياسمين الرشيدي </li>
+                <li type="none"> شيماء العسيري</li>
+                <li type="none"> ريماس محمد</li>
+
+            </ul>
+        </div>
+    </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const membersList = document.getElementById('members-list');
+
+            function Reorder_randomly() {
+                for (let i = membersList.children.length; i >= 0; i--) {
+                    membersList.appendChild(membersList.children[Math.random() * i | 0]);
+                }
+            }
+
+            Reorder_randomly();
+
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
